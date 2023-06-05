@@ -1,22 +1,3 @@
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-
-//public class Board : MonoBehaviour
-//{
-//    // Start is called before the first frame update
-//    void Start()
-//    {
-
-//    }
-
-//    // Update is called once per frame
-//    void Update()
-//    {
-
-//    }
-//}
-
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,11 +9,12 @@ public class Board : MonoBehaviour
     [SerializeField] private int sizeY = 6;
     [SerializeField] private Tile tilePrefab;
     [SerializeField] private SpriteRenderer boardPrefab;
-    [SerializeField] private Block blockPrefab; 
-    public List<BlockType> blockTypes;
+    [SerializeField] private Block blockPrefab;
+    [SerializeField] private int amountBlocks;
     private List<Tile> tileMap;
     private List<Block> blockTile;
-    private BlockType GetBlockTypeByValue(int value) => blockTypes.First(t => t.Value == value);
+
+   
 
     private void Start()
     {
@@ -81,29 +63,6 @@ public class Board : MonoBehaviour
         float boardSizeY = tileSize * sizeY +0.1f;
         var board = Instantiate(boardPrefab, Vector3.zero, Quaternion.identity);
         board.transform.localScale = new Vector3(boardSizeX, boardSizeY, 1f);
-
-        SpawnBlocks(2);
-    }
-
-    private void SpawnBlocks(int amout)
-    {
-        var freeNodes = tileMap.Where(n => n.isOccupiedBlock == null).OrderBy(b => Random.value).ToList();
-
-        foreach(var tile in freeNodes.Take(amout))
-        {
-            var block = Instantiate(blockPrefab, tile.Pos, Quaternion.identity);
-            block.Init(GetBlockTypeByValue(2));
-        }
-
-        if(freeNodes.Count() == 1)
-        {
-            return;
-        }
     }
 }
 
-[SerializeField] 
-public struct BlockType{
-    public int Value;
-    public Color color;
-}
