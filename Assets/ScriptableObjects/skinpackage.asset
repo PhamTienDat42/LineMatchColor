@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aee97c7994d4e646beed2d61dc66711, type: 3}
+  m_Name: skinpackage
+  m_EditorClassIdentifier: 
+  colores:
+  - {r: 1, g: 0.3921569, b: 0.39607847, a: 0}
+  - {r: 0.25882354, g: 0.91372555, b: 1, a: 0}
+  - {r: 1, g: 0.98823535, b: 0.33333334, a: 0}
+  - {r: 1, g: 0.5764706, b: 0.33333334, a: 0}
+  - {r: 0.21176472, g: 1, b: 0.31764707, a: 0}
+  - {r: 0.6, g: 0, b: 1, a: 0}

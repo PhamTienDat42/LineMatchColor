@@ -1595,6 +1595,8 @@ MonoBehaviour:
   boardPrefab: {fileID: 3325727686284802541, guid: 15ba1abff60749c46baa5587a96277f7, type: 3}
   blockPrefab: {fileID: 5914426390255981828, guid: ccb0aba6bb0a57b4eb2c28e06a9dc29a, type: 3}
   amountBlocks: 8
+  tileMap: []
+  blockTile: []
 --- !u!1 &2076000565
 GameObject:
   m_ObjectHideFlags: 0
